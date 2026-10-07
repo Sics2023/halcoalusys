@@ -27,6 +27,22 @@
         <script src="js/html5shiv.js"></script>
     <![endif]-->
 
+<style>
+.contact-side-image {
+    height: calc(100% - 18px); /* bottom edge lines up with the Submit button */
+    min-height: 0;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+.contact-side-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+</style>
 </head>
 
 <body>
@@ -205,6 +221,12 @@
                             </div>
                         </form>
                     </div>
+                </div>
+            </div>
+
+            <div class="col-xl-4 d-none d-xl-block">
+                <div class="contact-side-image">
+                    <img src="images/resources/contact-glass-partition.jpg" alt="Office cabins fitted with ALUSYS slim aluminium glass partitions">
                 </div>
             </div>
 
