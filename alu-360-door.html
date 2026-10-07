@@ -108,7 +108,37 @@
         th:last-child, td:last-child {
           border-right: none;
         }
-      </style>
+      
+.typology-card {
+    background: #ffffff;
+    border: 1px solid #e3e6e8;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.typology-card a.lightbox-image {
+    display: block;
+}
+.typology-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: contain;
+}
+.typology-card span {
+    display: block;
+    margin-top: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #4A5F6F;
+}
+.typology-group-title {
+    margin: 10px 0 20px;
+}
+.shade-group-title {
+    margin: 10px 0 20px;
+}
+</style>
 
 </head>
 
@@ -179,7 +209,7 @@
                                         <li><a href="aluminium-lover-baffle-systems.html">	Aluminium Lover & Baffle Systems</a></li>
                                     </ul>
                                 </li>
-                                <li class="dropdown"><a href="interior-solutions.html">Interior Solutuons</a>
+                                <li class="dropdown"><a href="interior-solutions.html">Interior Solutions</a>
                                     <ul>
                                         <li><a href="slim-partition-systems.html">Slim Partition Systems</a></li>
                                         <li><a href="alu-slim-door.html">Slim Door</a></li>
@@ -352,25 +382,16 @@
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="single-product-image-holder">
-                                            <img src="images/products/exterior/semi-glazing.png" alt="Awesome Image">
+                                            <img src="images/products/placeholder-product.png" alt="ALU 360 Door">
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="content-box">
                                             
-                                            <h2>Alu 360 Door</h2>
+                                            <h2>ALU 360 Door</h2>
                                          
                                             <div class="text">
-                                                <p>The HALCO  ALU 360 Door is a cutting-edge pivot door 
-                                                    system designed to rotate on a central vertical axis—offering
-                                                     a full 360° revolving capability. Engineered with ultra-slim 
-                                                     aluminium profiles, this system creates 
-                                                    a striking architectural feature with fluid motion,
-                                                     seamless transitions, and spatial elegance.
-        </p> 
-        <p>Ideal for luxury interiors, gallery spaces, entrance lobbies, and high-end residences,
-             the Revolva360 combines form, 
-            function, and flexibility in one dynamic door solution.</p>
+                                                <p>The HALCO ALU 360 Door is a cutting-edge pivot door system designed to rotate on a central vertical axis—offering a full 360° revolving capability. Engineered with ultra-slim aluminium profiles, this system creates a striking architectural feature with fluid motion, seamless transitions, and spatial elegance.</p>
                                             </div>
                                           
                                           
@@ -413,13 +434,13 @@
 
                                                         <div class="hl-panel">
                     <div class="hl-panel-inner">
-                    <div class="hl-row hl-single">
+                    <div class="hl-row">
                         <div class="hl-col">
                             <h5 class="hl-col-title">Key Features</h5>
                             <div class="hl-list">
                             <div class="hl-feature-card">
                                 <div class="hl-feature-icon"><i class="fas fa-rotate"></i></div>
-                                <div class="hl-feature-text">360° Central Pivot Rotation for flexible entry/exit</div>
+                                <div class="hl-feature-text">360° Central Pivot Rotation for flexible Entry/Exit</div>
                             </div>
                             <div class="hl-feature-card">
                                 <div class="hl-feature-icon"><i class="fas fa-link"></i></div>
@@ -427,21 +448,39 @@
                             </div>
                             <div class="hl-feature-card">
                                 <div class="hl-feature-icon"><i class="fas fa-feather-pointed"></i></div>
-                                <div class="hl-feature-text">Soft Close & Synchronised Movement for smooth sliding</div>
-                            </div>
-                            <div class="hl-feature-card">
-                                <div class="hl-feature-icon"><i class="fas fa-feather-pointed"></i></div>
                                 <div class="hl-feature-text">Soft-close and Hold-open Mechanism (optional)</div>
                             </div>
                             <div class="hl-feature-card">
                                 <div class="hl-feature-icon"><i class="fas fa-eye-slash"></i></div>
-                                <div class="hl-feature-text">Top & Bottom Pivot Hardware Concealed for Clean Finish</div>
+                                <div class="hl-feature-text">Top &amp; Bottom Pivot Hardware Concealed for Clean Finish</div>
                             </div>
                             <div class="hl-feature-card">
                                 <div class="hl-feature-icon"><i class="fas fa-vector-square"></i></div>
                                 <div class="hl-feature-text">Frameless or Minimal Frame Glass Options</div>
                             </div>
-                        
+                            </div></div>
+                        <div class="hl-divider">
+                            <div class="hl-divider-icon"><i class="fas fa-bookmark"></i></div>
+                        </div>
+                        <div class="hl-col">
+                            <h5 class="hl-col-title">Applications</h5>
+                            <div class="hl-list">
+                            <div class="hl-app-row">
+                                <div class="hl-app-icon"><i class="fas fa-gem"></i></div>
+                                <div class="hl-app-text">Luxury Interiors</div>
+                            </div>
+                            <div class="hl-app-row">
+                                <div class="hl-app-icon"><i class="fas fa-image"></i></div>
+                                <div class="hl-app-text">Gallery Spaces</div>
+                            </div>
+                            <div class="hl-app-row">
+                                <div class="hl-app-icon"><i class="fas fa-door-open"></i></div>
+                                <div class="hl-app-text">Entrance Lobbies</div>
+                            </div>
+                            <div class="hl-app-row">
+                                <div class="hl-app-icon"><i class="fas fa-house"></i></div>
+                                <div class="hl-app-text">High-end Residences</div>
+                            </div>
                             </div></div>
                     </div>
                     </div>
@@ -500,7 +539,13 @@
                                                 <div class="row">
                                                     <div class="col-xl-12">
                                                         <h5 style="margin-bottom:20px;">Typology</h5>
-                                                        <p style="color:#828282;">Typology details coming soon.</p>
+                                                        <p style="margin-bottom:25px;">Single panel rotating on a central pivot, with the pivot fixed at the ceiling and a floor spring at the flooring.</p>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-12">
+                                                        <div class="typology-card">
+                                                            <a class="lightbox-image" href="images/products/interior/drawings/alu-360-door-drawing.png" title="Pivot Door Elevation with Side &amp; Top Section"><img src="images/products/interior/drawings/alu-360-door-drawing.png" alt="Pivot Door Elevation with Side &amp; Top Section"></a>
+                                                            <span>Pivot Door Elevation with Side &amp; Top Section</span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -542,70 +587,108 @@
 <div class="tab" id="shades">
     <div class="product-details-content">
         <div class="row">
-
-            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                <div class="single-service-image-box shade">
-                    <div class="shade-media" style="background-image:url('images/shades/champagne.jpg');"></div>
-                    <span>Champagne</span>
-                </div>
+            <div class="col-xl-12">
+                <p style="margin-bottom:25px;">Elevate your interior aesthetics with our finishing palette, featuring durable Powder Coating, Premium Anodizing for corrosion-proof metallic sophistication, and sublimation Wood Coating offering timber aesthetics without the maintenance.</p>
             </div>
-
+        </div>
+        <h5 class="shade-group-title">Powder Coating</h5>
+        <div class="row">
             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                 <div class="single-service-image-box shade">
                     <div class="shade-media" style="background-image:url('images/shades/matt-black.jpg');"></div>
                     <span>Matt Black</span>
                 </div>
             </div>
-
-            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                <div class="single-service-image-box shade">
-                    <div class="shade-media" style="background-image:url('images/shades/metallic-black.jpg');"></div>
-                    <span>Metallic Black</span>
-                </div>
-            </div>
-
-            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                <div class="single-service-image-box shade">
-                    <div class="shade-media" style="background-image:url('images/shades/metallic-grey.jpg');"></div>
-                    <span>Metallic Grey</span>
-                </div>
-            </div>
-
             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                 <div class="single-service-image-box shade">
                     <div class="shade-media" style="background-image:url('images/shades/satin-grey.jpg');"></div>
                     <span>Satin Grey</span>
                 </div>
             </div>
-
             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                 <div class="single-service-image-box shade">
                     <div class="shade-media" style="background-image:url('images/shades/satin-white.jpg');"></div>
                     <span>Satin White</span>
                 </div>
             </div>
-
             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                 <div class="single-service-image-box shade">
-                    <div class="shade-media" style="background-image:url('images/shades/teak-wood-finish.jpg');"></div>
-                    <span>Teak Wood Finish</span>
+                    <div class="shade-media" style="background-image:url('images/shades/metallic-grey.jpg');"></div>
+                    <span>Metallic Grey</span>
                 </div>
             </div>
-
             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                 <div class="single-service-image-box shade">
                     <div class="shade-media" style="background-image:url('images/shades/texture-grey.jpg');"></div>
                     <span>Texture Grey</span>
                 </div>
             </div>
-
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                <div class="single-service-image-box shade">
+                    <div class="shade-media" style="background-image:url('images/shades/metallic-black.jpg');"></div>
+                    <span>Metallic Black</span>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                <div class="single-service-image-box shade">
+                    <div class="shade-media" style="background-image:url('images/shades/champagne.jpg');"></div>
+                    <span>Champagne</span>
+                </div>
+            </div>
+        </div>
+        <h5 class="shade-group-title">Anodized Shades</h5>
+        <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                <div class="single-service-image-box shade">
+                    <div class="shade-media" style="background-image:url('images/shades/natural-anodised.jpg');"></div>
+                    <span>Natural Anodised (NA)</span>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                <div class="single-service-image-box shade">
+                    <div class="shade-media" style="background-image:url('images/shades/light-champagne.jpg');"></div>
+                    <span>Light Champagne (HAL AC 01)</span>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                <div class="single-service-image-box shade">
+                    <div class="shade-media" style="background-image:url('images/shades/anodised-champagne.jpg');"></div>
+                    <span>Champagne (HAL AC 02)</span>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                <div class="single-service-image-box shade">
+                    <div class="shade-media" style="background-image:url('images/shades/light-bronze.jpg');"></div>
+                    <span>Light Bronze (HAL AC 03)</span>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                <div class="single-service-image-box shade">
+                    <div class="shade-media" style="background-image:url('images/shades/dark-bronze.jpg');"></div>
+                    <span>Dark Bronze (HAL AC 04)</span>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                <div class="single-service-image-box shade">
+                    <div class="shade-media" style="background-image:url('images/shades/anodised-black.jpg');"></div>
+                    <span>Black (HAL AC 05)</span>
+                </div>
+            </div>
+        </div>
+        <h5 class="shade-group-title">Wood Coating Finish</h5>
+        <div class="row">
             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                 <div class="single-service-image-box shade">
                     <div class="shade-media" style="background-image:url('images/shades/wallnut.jpg');"></div>
                     <span>Wallnut</span>
                 </div>
             </div>
-
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                <div class="single-service-image-box shade">
+                    <div class="shade-media" style="background-image:url('images/shades/teak-wood-finish.jpg');"></div>
+                    <span>Teak Wood</span>
+                </div>
+            </div>
         </div>
     </div>
 </div>
