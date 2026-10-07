@@ -1545,17 +1545,41 @@ select:focus {
     content: "";
 }
 
-/* Contrast-aware hero caption text: applied per-slide when the background
-   image behind the caption is bright, so the text stays legible. */
+/* Hero overlay for the product/category pages, whose slide photos are bright
+   and un-retouched: a brand-tinted shade under the captions so the white text
+   stays legible on every photo. The home, About, Products and Why Aluminium
+   sliders (style2/style3) use pre-darkened photos and are left untouched. */
+.main-slider:not(.style2):not(.style3) .slotholder::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(180deg, rgba(22, 30, 37, 0.35) 0%, rgba(22, 30, 37, 0.55) 50%, rgba(22, 30, 37, 0.45) 100%);
+}
+/* Subtext sits in the same caption as the title, so it always follows it */
+.main-slider .slide-content .big-title + .text {
+    margin-top: 22px;
+    white-space: normal;
+}
+.main-slider:not(.style2):not(.style3) .slide-content .big-title,
+.main-slider:not(.style2):not(.style3) .slide-content .text {
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.35);
+}
+/* Captions are white on every hero now that the overlay guarantees contrast;
+   the old per-slide "dark-caption" switch (black text) is neutralised. */
 .main-slider .slide-content.dark-caption .big-title,
 .main-slider .slide-content.dark-caption .text {
-    color: #1a1a1a;
+    color: #ffffff;
 }
 .main-slider .slide-content.dark-caption .btn-box a.project-view-button {
-    color: #1a1a1a;
+    color: #ffffff;
 }
 .main-slider .slide-content.dark-caption .btn-box a.project-view-button:before {
-    background: #1a1a1a;
+    background: #ffffff;
 }
 
 
