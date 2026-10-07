@@ -2436,6 +2436,50 @@ select:focus {
     color: #4A5F6F;
     transition: all 700ms ease 500ms;
 }
+.single-working-process .inner .icon-holder .wa-icon{
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    color: #bababa;
+    transition: all 700ms ease 500ms;
+}
+.single-working-process:hover .inner .icon-holder .wa-icon{
+    color: #4A5F6F;
+}
+
+/* Equal-height cards: every card matches the tallest one, icons sit on a common baseline */
+.why-alu-grid > [class*="col-"]{
+    display: flex;
+}
+.why-alu-grid .single-working-process{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.why-alu-grid .single-working-process .inner{
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+.why-alu-grid .single-working-process .inner h3{
+    min-height: 2.6em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.why-alu-grid .single-working-process .inner .icon-holder{
+    margin-top: auto;
+}
+@media (min-width: 992px){
+    .why-alu-grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 1fr;
+    }
+    .why-alu-grid > [class*="col-"]{
+        max-width: none;
+    }
+}
 
 
 
