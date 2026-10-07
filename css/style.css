@@ -1565,6 +1565,16 @@ select:focus {
     margin-top: 22px;
     white-space: normal;
 }
+/* Phones: keep hero captions inside the screen width */
+@media (max-width: 575px) {
+    .main-slider .tp-caption .slide-content {
+        max-width: calc(100vw - 40px);
+    }
+    .main-slider .tp-caption .slide-content .big-title,
+    .main-slider .tp-caption .slide-content .text {
+        white-space: normal !important;
+    }
+}
 .main-slider:not(.style2):not(.style3) .slide-content .big-title,
 .main-slider:not(.style2):not(.style3) .slide-content .text {
     text-shadow: 0 2px 14px rgba(0, 0, 0, 0.35);
