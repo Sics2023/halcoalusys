@@ -1545,10 +1545,9 @@ select:focus {
     content: "";
 }
 
-/* Hero overlay for the product/category pages, whose slide photos are bright
-   and un-retouched: a brand-tinted shade under the captions so the white text
-   stays legible on every photo. The home, About, Products and Why Aluminium
-   sliders (style2/style3) use pre-darkened photos and are left untouched. */
+/* Hero overlay for product/category pages: full-bleed photo with a brand-tinted
+   gradient that is darkest behind the caption, so text reads on bright photos.
+   (Home, About, Products and Why Aluminium sliders use pre-darkened photos.) */
 .main-slider:not(.style2):not(.style3) .slotholder::after {
     content: "";
     position: absolute;
@@ -1558,13 +1557,13 @@ select:focus {
     bottom: 0;
     z-index: 1;
     pointer-events: none;
-    background: linear-gradient(180deg, rgba(22, 30, 37, 0.35) 0%, rgba(22, 30, 37, 0.55) 50%, rgba(22, 30, 37, 0.45) 100%);
+    background: linear-gradient(90deg, rgba(18, 25, 31, 0.88) 0%, rgba(18, 25, 31, 0.72) 42%, rgba(18, 25, 31, 0.30) 100%);
+}
+.main-slider li[data-hero="right"] .slotholder::after {
+    background: linear-gradient(270deg, rgba(18, 25, 31, 0.88) 0%, rgba(18, 25, 31, 0.72) 42%, rgba(18, 25, 31, 0.30) 100%);
 }
 /* Interior heroes are composites (product render + darkened, blurred backdrop
    behind the text), so they need no extra tint over the product */
-.main-slider.hero-composite .slotholder::after {
-    display: none;
-}
 .single-featured-box .inner .img-holder img {
     width: 100%;
     height: 100%;
@@ -1586,9 +1585,8 @@ select:focus {
         white-space: normal !important;
     }
 }
-.main-slider:not(.style2):not(.style3) .slide-content .big-title,
-.main-slider:not(.style2):not(.style3) .slide-content .text {
-    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.35);
+.main-slider:not(.style2):not(.style3) .slide-content .big-title {
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
 }
 /* Captions are white on every hero now that the overlay guarantees contrast;
    the old per-slide "dark-caption" switch (black text) is neutralised. */
@@ -13449,4 +13447,84 @@ li .single-footer-contact-info .text p span{
     background: #ffffff;
     padding: 18px;
     border: 1px solid #e3e6e8;
+}
+
+/* Hero caption content: eyebrow, title, description, spec chips, CTA */
+.main-slider .slide-content .hero-eyebrow {
+    display: inline-block;
+    margin-bottom: 18px;
+    padding: 6px 14px;
+    border-left: 3px solid #9fb3c2;
+    background: rgba(255, 255, 255, 0.08);
+    color: #dbe4ea;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: 'Rubik', sans-serif;
+}
+.main-slider:not(.style2):not(.style3) .slide-content .big-title {
+    font-size: 58px;
+    line-height: 1.12em;
+}
+.main-slider .slide-content .big-title + .text {
+    max-width: 620px;
+    font-size: 18px;
+    line-height: 1.65em;
+    color: rgba(255, 255, 255, 0.92);
+}
+.main-slider .slide-content .hero-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 26px 0 0;
+    padding: 0;
+    list-style: none;
+    white-space: normal;
+}
+.main-slider .slide-content .hero-chips:empty {
+    display: none;
+}
+.main-slider .slide-content .hero-chips li {
+    padding: 8px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 30px;
+    background: rgba(74, 95, 111, 0.45);
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    font-family: 'Rubik', sans-serif;
+}
+.main-slider .slide-content .hero-cta {
+    margin-top: 30px;
+}
+@media (max-width: 991px) {
+    .main-slider:not(.style2):not(.style3) .slide-content .big-title {
+        font-size: 40px;
+    }
+}
+@media (max-width: 767px) {
+    .main-slider .slide-content .hero-chips,
+    .main-slider .slide-content .hero-cta {
+        display: none;
+    }
+    .main-slider .slide-content .hero-eyebrow {
+        margin-bottom: 10px;
+        font-size: 11px;
+        letter-spacing: 1px;
+        padding: 4px 10px;
+    }
+    .main-slider:not(.style2):not(.style3) .slide-content .big-title {
+        font-size: 26px;
+    }
+    .main-slider .slide-content .big-title + .text {
+        margin-top: 10px;
+        font-size: 13px;
+        line-height: 1.5em;
+    }
+    .main-slider .slide-content .big-title br {
+        display: none;
+    }
 }
