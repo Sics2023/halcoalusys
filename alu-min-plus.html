@@ -120,7 +120,54 @@
           font-size: 11px;
           white-space: nowrap;
         }
-      </style>
+      
+.single-product-image-holder a.lightbox-image img,
+.typology-drawing img {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: #ffffff;
+}
+.typology-drawing {
+    background: #ffffff;
+    border: 1px solid #e3e6e8;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.typology-drawing span {
+    display: block;
+    margin-top: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #4A5F6F;
+}
+.gallery-card {
+    margin-bottom: 30px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+.gallery-card a.lightbox-image {
+    display: block;
+}
+.gallery-card img {
+    display: block;
+    width: 100%;
+    height: 460px;
+    object-fit: cover;
+    transition: transform 500ms ease;
+}
+.gallery-card.is-render img {
+    object-fit: contain;
+    background: #f4f5f6;
+    padding: 20px;
+}
+.gallery-card:hover img {
+    transform: scale(1.03);
+}
+</style>
 
 </head>
 
@@ -188,7 +235,7 @@
                                         <li><a href="exterior-bi-folding-systems.html">Exterior Bi-Folding Systems</a></li>
                                         <li><a href="aluminium-railing-systems.html">Aluminium Railing Systems</a></li>
                                         <li><a href="semi-unitized-glazing-systems.html">Semi-Unitized Glazing Systems</a></li>
-                                        <li><a href="aluminium-lover-baffle-systems.html">	Aluminium Lover & Baffle Systems</a></li>
+                                        <li><a href="aluminium-lover-baffle-systems.html">	Aluminium Louver &amp; Baffle Systems</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropdown"><a href="interior-solutions.html">Interior Solutions</a>
@@ -693,36 +740,20 @@
                                             </div>
                                         </div>
 
-                                        <div class="tab " id="gallery">
+                                        <div class="tab" id="gallery">
                                             <div class="product-details-content">
                                                 <div class="row">
-                                               
-                                                   <div class="col-xl-6">
-                                                    <div class="single-service-image-box">
-                                                        <img src="https://www.schueco.com/resource/responsive-image/1324698/m13a-gallery-fullsize-5-square/xxl/2/schiebetueren4-image.webp" alt="Awesome Image">
+                                                   <div class="col-lg-6">
+                                                    <div class="single-service-image-box gallery-card">
+                                                        <a class="lightbox-image" data-fancybox="product-gallery" href="images/slides/hero-min-sliding.jpg" title="ALU Min+ – installed view"><img src="images/slides/hero-min-sliding.jpg" alt="ALU Min+ – installed view"></a>
                                                     </div>
-                                                        
                                                    </div>
-                                                
-                                                   <div class="col-xl-6">
-                                                    <div class="single-service-image-box">
-                                                        <img src="https://www.schueco.com/resource/responsive-image/1324696/m13a-gallery-fullsize-5-square/xxl/2/schiebetueren2-image.webp" alt="Awesome Image">
+                                                   <div class="col-lg-6">
+                                                    <div class="single-service-image-box gallery-card is-render">
+                                                        <a class="lightbox-image" data-fancybox="product-gallery" href="images/products/exterior/Alu%20Min%20%2B.jpg" title="ALU Min+ – profile detail"><img src="images/products/exterior/Alu%20Min%20%2B.jpg" alt="ALU Min+ – profile detail"></a>
                                                     </div>
-                                                        
                                                    </div>
-                                                   <div class="col-xl-6">
-                                                    <div class="single-service-image-box">
-                                                        <img src="https://www.schueco.com/resource/responsive-image/1324694/m13a-gallery-fullsize-5-landscape/xxl/2/schiebetueren3-image.webp" alt="Awesome Image">
-                                                    </div>
-                                                        
-                                                   </div>
-                                                   <div class="col-xl-6">
-                                                    <div class="single-service-image-box">
-                                                        <img src="https://www.schueco.com/resource/responsive-image/1324700/m13a-gallery-fullsize-5-landscape/xxl/2/schiebetueren5-image.webp" alt="Awesome Image">
-                                                    </div>
-                                                        </div>
-                                                   </div>
-                                             
+                                                </div>
                                             </div>
                                         </div>
 

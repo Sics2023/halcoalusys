@@ -1560,6 +1560,17 @@ select:focus {
     pointer-events: none;
     background: linear-gradient(180deg, rgba(22, 30, 37, 0.35) 0%, rgba(22, 30, 37, 0.55) 50%, rgba(22, 30, 37, 0.45) 100%);
 }
+/* Interior heroes are composites (product render + darkened, blurred backdrop
+   behind the text), so they need no extra tint over the product */
+.main-slider.hero-composite .slotholder::after {
+    display: none;
+}
+.single-featured-box .inner .img-holder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 /* Subtext sits in the same caption as the title, so it always follows it */
 .main-slider .slide-content .big-title + .text {
     margin-top: 22px;
@@ -13411,4 +13422,22 @@ li .single-footer-contact-info .text p span{
         width: 100%;
         margin-bottom: 34px;
     }
+}
+
+/* Interior product image: the 2D drawing, capped so it sits beside the description */
+.single-product-image-holder > a.lightbox-image {
+    display: block;
+    background: #ffffff;
+    border: 1px solid #e3e6e8;
+    border-radius: 6px;
+    padding: 20px;
+}
+.single-product-image-holder > a.lightbox-image img {
+    width: 100%;
+    height: 480px;
+    object-fit: contain;
+}
+.typology-drawing img {
+    max-height: 900px;
+    object-fit: contain;
 }

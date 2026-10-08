@@ -138,6 +138,53 @@
 .shade-group-title {
     margin: 10px 0 20px;
 }
+
+.single-product-image-holder a.lightbox-image img,
+.typology-drawing img {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: #ffffff;
+}
+.typology-drawing {
+    background: #ffffff;
+    border: 1px solid #e3e6e8;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.typology-drawing span {
+    display: block;
+    margin-top: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #4A5F6F;
+}
+.gallery-card {
+    margin-bottom: 30px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+.gallery-card a.lightbox-image {
+    display: block;
+}
+.gallery-card img {
+    display: block;
+    width: 100%;
+    height: 460px;
+    object-fit: cover;
+    transition: transform 500ms ease;
+}
+.gallery-card.is-render img {
+    object-fit: contain;
+    background: #f4f5f6;
+    padding: 20px;
+}
+.gallery-card:hover img {
+    transform: scale(1.03);
+}
 </style>
 
 </head>
@@ -206,7 +253,7 @@
                                         <li><a href="exterior-bi-folding-systems.html">Exterior Bi-Folding Systems</a></li>
                                         <li><a href="aluminium-railing-systems.html">Aluminium Railing Systems</a></li>
                                         <li><a href="semi-unitized-glazing-systems.html">Semi-Unitized Glazing Systems</a></li>
-                                        <li><a href="aluminium-lover-baffle-systems.html">	Aluminium Lover & Baffle Systems</a></li>
+                                        <li><a href="aluminium-lover-baffle-systems.html">	Aluminium Louver &amp; Baffle Systems</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropdown"><a href="interior-solutions.html">Interior Solutions</a>
@@ -237,7 +284,7 @@
         </header>
 
            <!--Main Slider-->
-           <section class="main-slider">
+           <section class="main-slider hero-composite">
             <div class="rev_slider_wrapper fullwidthbanner-container" id="rev_slider_one_wrapper" data-source="gallery">
                 <div class="rev_slider fullwidthabanner" id="rev_slider_one" data-version="5.4.1">
                     <ul>
@@ -247,12 +294,12 @@
                             data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3=""
                             data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9=""
                             data-rotate="0" data-saveperformance="off" data-slotamount="default"
-                            data-thumb="images/slides/hero-interior-360-door.jpg" data-title="Slide Title"
+                            data-thumb="images/slides/hero-int-360-door-a.jpg" data-title="Slide Title"
                             data-transition="parallaxvertical">
 
                             <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10"
-                                data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina=""
-                                src="images/slides/hero-interior-360-door.jpg">
+                                data-bgposition="right center" data-bgrepeat="no-repeat" data-no-retina=""
+                                src="images/slides/hero-int-360-door-a.jpg">
 
                             <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
                                 data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on"
@@ -307,12 +354,12 @@
                             data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3=""
                             data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9=""
                             data-rotate="0" data-saveperformance="off" data-slotamount="default"
-                            data-thumb="images/slides/hero-interior-360-door.jpg" data-title="Slide Title"
+                            data-thumb="images/slides/hero-int-360-door-b.jpg" data-title="Slide Title"
                             data-transition="parallaxvertical">
 
                             <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10"
-                                data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina=""
-                                src="images/slides/hero-interior-360-door.jpg">
+                                data-bgposition="left center" data-bgrepeat="no-repeat" data-no-retina=""
+                                src="images/slides/hero-int-360-door-b.jpg">
 
 
                             <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
@@ -384,7 +431,7 @@
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="single-product-image-holder">
-                                            <img src="images/products/placeholder-product.png" alt="ALU 360 Door">
+                                            <a class="lightbox-image" href="images/products/interior/2d/360-door.jpg" title="ALU 360 Door – 2D drawing"><img src="images/products/interior/2d/360-door.jpg" alt="ALU 360 Door – 2D drawing"></a>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
@@ -543,46 +590,25 @@
                                                         <h5 style="margin-bottom:20px;">Typology</h5>
                                                         <p style="margin-bottom:25px;">Single panel rotating on a central pivot, with the pivot fixed at the ceiling and a floor spring at the flooring.</p>
                                                     </div>
-                                                    <div class="col-lg-6 col-md-6 col-sm-12">
-                                                        <div class="typology-card">
-                                                            <a class="lightbox-image" href="images/products/interior/drawings/alu-360-door-drawing.png" title="Pivot Door Elevation with Side &amp; Top Section"><img src="images/products/interior/drawings/alu-360-door-drawing.png" alt="Pivot Door Elevation with Side &amp; Top Section"></a>
-                                                            <span>Pivot Door Elevation with Side &amp; Top Section</span>
+                                                    <div class="col-xl-12">
+                                                        <div class="typology-drawing">
+                                                            <a class="lightbox-image" href="images/products/interior/2d/360-door.jpg" title="ALU 360 Door – typologies"><img src="images/products/interior/2d/360-door.jpg" alt="ALU 360 Door – 2D typology drawing"></a>
+                                                            <span>ALU 360 Door – 2D typology drawing (click to enlarge)</span>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <div class="tab " id="gallery">
+                                        <div class="tab" id="gallery">
                                             <div class="product-details-content">
                                                 <div class="row">
-                                               
-                                                   <div class="col-xl-6">
-                                                    <div class="single-service-image-box">
-                                                        <img src="https://www.schueco.com/resource/responsive-image/1324698/m13a-gallery-fullsize-5-square/xxl/2/schiebetueren4-image.webp" alt="Awesome Image">
+                                                   <div class="col-lg-8 offset-lg-2">
+                                                    <div class="single-service-image-box gallery-card">
+                                                        <a class="lightbox-image" data-fancybox="product-gallery" href="images/products/interior/3d/360-door.jpg" title="ALU 360 Door – installed view"><img src="images/products/interior/3d/360-door.jpg" alt="ALU 360 Door – installed view" style="height:auto;max-height:720px;object-fit:contain;"></a>
                                                     </div>
-                                                        
                                                    </div>
-                                                
-                                                   <div class="col-xl-6">
-                                                    <div class="single-service-image-box">
-                                                        <img src="https://www.schueco.com/resource/responsive-image/1324696/m13a-gallery-fullsize-5-square/xxl/2/schiebetueren2-image.webp" alt="Awesome Image">
-                                                    </div>
-                                                        
-                                                   </div>
-                                                   <div class="col-xl-6">
-                                                    <div class="single-service-image-box">
-                                                        <img src="https://www.schueco.com/resource/responsive-image/1324694/m13a-gallery-fullsize-5-landscape/xxl/2/schiebetueren3-image.webp" alt="Awesome Image">
-                                                    </div>
-                                                        
-                                                   </div>
-                                                   <div class="col-xl-6">
-                                                    <div class="single-service-image-box">
-                                                        <img src="https://www.schueco.com/resource/responsive-image/1324700/m13a-gallery-fullsize-5-landscape/xxl/2/schiebetueren5-image.webp" alt="Awesome Image">
-                                                    </div>
-                                                        </div>
-                                                   </div>
-                                             
+                                                </div>
                                             </div>
                                         </div>
 
