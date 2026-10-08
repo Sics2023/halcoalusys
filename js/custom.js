@@ -1091,3 +1091,11 @@ jQuery(window).on('load', function() {
 
 
 $(window).enllax();
+// Footer: expand / collapse the Exterior and Interior Solutions category lists
+document.addEventListener('click', function (e) {
+    var btn = e.target.closest ? e.target.closest('.footer-sub-toggle') : null;
+    if (!btn) return;
+    var li = btn.parentNode;
+    var open = li.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+});

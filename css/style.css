@@ -13589,3 +13589,67 @@ li .single-footer-contact-info .text p span{
 .footer-area.style4 .single-footer-widget .usefull-links ul li a {
     white-space: nowrap;
 }
+
+/* Footer: expandable Exterior / Interior Solutions */
+.footer-area.style4 .single-footer-widget .usefull-links ul li.footer-has-sub > a:before {
+    display: none;
+}
+.footer-area.style4 .usefull-links .footer-sub-toggle {
+    position: absolute;
+    top: 0;
+    left: -6px;
+    width: 22px;
+    height: 36px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #9fb3c2;
+    font-size: 18px;
+    line-height: 36px;
+    cursor: pointer;
+}
+.footer-area.style4 .usefull-links .footer-sub-toggle:before {
+    content: "+";
+}
+.footer-area.style4 .usefull-links .footer-has-sub.open .footer-sub-toggle:before {
+    content: "\2212";
+}
+.footer-area.style4 .usefull-links .footer-sub-toggle:hover,
+.footer-area.style4 .usefull-links .footer-sub-toggle:focus-visible {
+    color: #ffffff;
+}
+.footer-area.style4 .usefull-links ul.footer-sub {
+    display: none;
+    float: none;
+    width: auto;
+    margin: 2px 0 8px;
+    padding: 0 0 0 12px;
+    border-left: 1px solid rgba(159, 179, 194, 0.35);
+}
+.footer-area.style4 .usefull-links .footer-has-sub.open > ul.footer-sub {
+    display: block;
+}
+.footer-area.style4 .single-footer-widget .usefull-links ul.footer-sub li {
+    padding-left: 0;
+}
+.footer-area.style4 .single-footer-widget .usefull-links ul.footer-sub li a {
+    padding-left: 0;
+    font-size: 14px;
+    line-height: 28px;
+    white-space: normal;
+    color: #c3ccd2;
+}
+.footer-area.style4 .single-footer-widget .usefull-links ul.footer-sub li a:before {
+    display: none;
+}
+.footer-area.style4 .single-footer-widget .usefull-links ul.footer-sub li a:hover {
+    color: #ffffff;
+}
+.footer-area.style4 .single-footer-widget .usefull-links ul.footer-sub li {
+    line-height: 1.4;
+    padding: 5px 0;
+}
+.footer-area.style4 .single-footer-widget .usefull-links ul.footer-sub li a {
+    display: block;
+    line-height: 1.4;
+}
