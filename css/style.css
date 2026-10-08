@@ -13441,3 +13441,12 @@ li .single-footer-contact-info .text p span{
     max-height: 900px;
     object-fit: contain;
 }
+
+/* Interior category cards: 2D drawings shown whole on a white panel */
+.single-service-style2 .img-holder img.drawing-thumb {
+    height: 340px;
+    object-fit: contain;
+    background: #ffffff;
+    padding: 18px;
+    border: 1px solid #e3e6e8;
+}
