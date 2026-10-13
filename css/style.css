@@ -13983,3 +13983,36 @@ body.brochure-modal-open {
 .footer-bottom-area .footer-legal-links a:hover {
     color: #ffffff !important;
 }
+
+/* Why Aluminium hero */
+.main-slider .slide-content.why-hero .big-title {
+    font-size: 64px;
+}
+.main-slider .slide-content .hero-cta .hero-link {
+    display: inline-block;
+    margin-left: 26px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 500;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+}
+.main-slider .slide-content .hero-cta .hero-link:hover {
+    border-color: #ffffff;
+}
+@media (max-width: 767px) {
+    .main-slider .slide-content.why-hero .big-title {
+        font-size: 30px;
+    }
+}
+.main-slider .slide-content.why-hero .why-short {
+    display: none;
+}
+@media (max-width: 767px) {
+    .main-slider .slide-content.why-hero .why-short {
+        display: inline;
+    }
+    .main-slider .slide-content.why-hero .why-long {
+        display: none;
+    }
+}
