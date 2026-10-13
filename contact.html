@@ -42,6 +42,45 @@
     object-fit: cover;
     object-position: center;
 }
+
+/* Get in Touch cards: dark overlay on the light photo, equal-height cards */
+.contact-reach::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(180deg, rgba(18, 25, 31, 0.82) 0%, rgba(18, 25, 31, 0.72) 100%);
+}
+.contact-reach .sec-title p {
+    color: #9fb3c2;
+}
+.contact-reach .sec-title .title,
+.contact-reach .sec-title .title span {
+    color: #ffffff;
+}
+.contact-reach .working-process-carousel.owl-carousel .owl-nav [class*="owl-"] {
+    border-color: rgba(255, 255, 255, 0.4);
+}
+.contact-reach .working-process-carousel.owl-carousel .owl-nav [class*="owl-"] i:before {
+    color: #ffffff;
+}
+.contact-reach .working-process-carousel.owl-carousel .owl-nav [class*="owl-"]:hover {
+    border-color: #ffffff;
+}
+.contact-reach .owl-stage {
+    display: flex;
+}
+.contact-reach .owl-item {
+    display: flex;
+}
+.contact-reach .single-working-process-style2 {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.contact-reach .single-working-process-style2 .inner {
+    flex: 1 1 auto;
+}
 </style>
 </head>
 
@@ -233,7 +272,7 @@
         </div>
     </div>
 </section>
-  <section class="working-process-style2-area"
+  <section class="working-process-style2-area contact-reach"
   style="background-image:url(images/parallax-background/working-process-bg-style3.jpg);">
   <div class="container">
       <div class="sec-title">
