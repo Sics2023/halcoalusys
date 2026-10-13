@@ -23,6 +23,23 @@
         a.remove();
     }
 
+    // essential tab styles inline, so the tab shows even if an old style.css is cached
+    if (!document.getElementById('brochure-tab-style')) {
+        var st = document.createElement('style');
+        st.id = 'brochure-tab-style';
+        st.textContent =
+            '.brochure-tab{position:fixed!important;top:50%!important;right:0!important;left:auto!important;bottom:auto!important;' +
+            'z-index:2147483000!important;display:flex!important;align-items:center;gap:10px;margin:0;padding:18px 12px;border:0;' +
+            'border-radius:6px 0 0 6px;background:#4A5F6F;color:#fff;font-size:15px;font-weight:500;letter-spacing:1px;' +
+            'writing-mode:vertical-rl;transform:translateY(-50%) rotate(180deg);box-shadow:0 6px 18px rgba(0,0,0,.2);cursor:pointer}' +
+            '.brochure-tab i{transform:rotate(90deg)}' +
+            '.brochure-modal{position:fixed;inset:0;z-index:2147483001;display:flex;align-items:center;justify-content:center;padding:16px}' +
+            '.brochure-modal[hidden]{display:none}' +
+            '.brochure-modal-backdrop{position:absolute;inset:0;background:rgba(18,25,31,.7)}' +
+            '.brochure-modal-box{position:relative;width:100%;max-width:440px;background:#fff;border-radius:8px}';
+        document.head.appendChild(st);
+    }
+
     var tab = document.createElement('button');
     tab.type = 'button';
     tab.className = 'brochure-tab';

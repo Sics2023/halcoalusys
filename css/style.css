@@ -13978,3 +13978,8 @@ body.brochure-modal-open {
     color: #2C2C2C;
     border-color: #2C2C2C;
 }
+
+/* hover for the legal links (base colour is set inline in the markup) */
+.footer-bottom-area .footer-legal-links a:hover {
+    color: #ffffff !important;
+}
