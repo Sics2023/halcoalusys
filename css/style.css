@@ -14016,3 +14016,8 @@ body.brochure-modal-open {
         display: none;
     }
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+    .main-slider .slide-content.why-hero {
+        max-width: 480px;
+    }
+}
