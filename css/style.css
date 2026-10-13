@@ -13653,3 +13653,250 @@ li .single-footer-contact-info .text p span{
     display: block;
     line-height: 1.4;
 }
+
+/* Footer: single-column Quick Links */
+.footer-area.style4 .single-footer-widget .usefull-links ul.footer-links-single {
+    float: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.footer-area.style4 .single-footer-widget .usefull-links ul.footer-links-single > li {
+    line-height: 34px;
+}
+@media (min-width: 1200px) {
+    .footer-area.style4 .single-footer-widget .our-info-box {
+        max-width: 400px;
+    }
+}
+
+/* Footer bottom bar: copyright left, legal links right */
+.footer-bottom-area .footer-bottom-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px 30px;
+    padding: 4px 0;
+}
+.footer-bottom-area .footer-bottom-bar .footer-copyright {
+    margin: 0;
+    color: #c3ccd2;
+    font-size: 15px;
+}
+.footer-bottom-area .footer-legal-links {
+    display: flex;
+    gap: 28px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.footer-bottom-area .footer-legal-links a {
+    color: #c3ccd2;
+    font-size: 15px;
+    transition: color 300ms ease;
+}
+.footer-bottom-area .footer-legal-links a:hover {
+    color: #ffffff;
+}
+@media (max-width: 575px) {
+    .footer-bottom-area .footer-bottom-bar {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Privacy Policy / Terms & Conditions */
+.legal-page {
+    padding: 90px 0 100px;
+    background: #ffffff;
+}
+.legal-content h2 {
+    margin: 0 0 8px;
+    color: #2C2C2C;
+    font-size: 36px;
+    font-weight: 700;
+}
+.legal-content .legal-updated {
+    margin-bottom: 30px;
+    color: #7a8590;
+    font-size: 14px;
+}
+.legal-content h3 {
+    margin: 36px 0 12px;
+    color: #4A5F6F;
+    font-size: 20px;
+    font-weight: 600;
+}
+.legal-content p,
+.legal-content li {
+    color: #555f66;
+    font-size: 16px;
+    line-height: 1.75;
+}
+.legal-content ul {
+    margin: 0 0 16px;
+    padding-left: 20px;
+    list-style: disc;
+}
+.legal-content li {
+    margin-bottom: 6px;
+}
+.legal-content a {
+    color: #4A5F6F;
+    text-decoration: underline;
+}
+
+/* Floating "Download Brochure" tab + lead form popup */
+.brochure-tab {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    z-index: 9990;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 18px 12px;
+    border: 0;
+    border-radius: 6px 0 0 6px;
+    background: #4A5F6F;
+    color: #ffffff;
+    font-family: 'Rubik', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    writing-mode: vertical-rl;
+    transform: translateY(-50%) rotate(180deg);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background 300ms ease, padding 300ms ease;
+}
+.brochure-tab i {
+    transform: rotate(90deg);
+    font-size: 15px;
+}
+.brochure-tab:hover,
+.brochure-tab:focus-visible {
+    background: #3A4B58;
+    padding-right: 16px;
+}
+.brochure-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+}
+.brochure-modal[hidden] {
+    display: none;
+}
+.brochure-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(18, 25, 31, 0.7);
+}
+.brochure-modal-box {
+    position: relative;
+    width: 100%;
+    max-width: 440px;
+    padding: 40px 36px 32px;
+    border-top: 4px solid #4A5F6F;
+    border-radius: 8px;
+    background: #ffffff;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+.brochure-modal-box h3 {
+    margin: 0 0 8px;
+    color: #2C2C2C;
+    font-size: 24px;
+    font-weight: 600;
+}
+.brochure-modal-intro {
+    margin-bottom: 22px;
+    color: #66717a;
+    font-size: 15px;
+    line-height: 1.6;
+}
+.brochure-modal-close {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    border: 0;
+    background: transparent;
+    color: #7a8590;
+    font-size: 30px;
+    line-height: 1;
+    cursor: pointer;
+}
+.brochure-modal-close:hover {
+    color: #2C2C2C;
+}
+.brochure-form label {
+    display: block;
+    margin-bottom: 6px;
+    color: #2C2C2C;
+    font-size: 14px;
+    font-weight: 500;
+}
+.brochure-form input {
+    display: block;
+    width: 100%;
+    height: 48px;
+    margin-bottom: 16px;
+    padding: 0 16px;
+    border: 1px solid #d5dbe0;
+    border-radius: 4px;
+    color: #2C2C2C;
+    font-size: 15px;
+}
+.brochure-form input:focus {
+    border-color: #4A5F6F;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(74, 95, 111, 0.15);
+}
+.brochure-form .btn-one {
+    width: 100%;
+    border: 0;
+    cursor: pointer;
+}
+.brochure-form-error {
+    min-height: 20px;
+    margin: -6px 0 10px;
+    color: #b42318;
+    font-size: 14px;
+}
+.brochure-form-note {
+    margin: 14px 0 0;
+    color: #7a8590;
+    font-size: 13px;
+    text-align: center;
+}
+.brochure-form-note a,
+.brochure-thanks a {
+    color: #4A5F6F;
+    text-decoration: underline;
+}
+.brochure-thanks p {
+    color: #555f66;
+    font-size: 15px;
+    line-height: 1.6;
+}
+body.brochure-modal-open {
+    overflow: hidden;
+}
+@media (max-width: 575px) {
+    .brochure-tab {
+        padding: 14px 9px;
+        font-size: 13px;
+    }
+    .brochure-modal-box {
+        padding: 34px 22px 26px;
+    }
+}
+/* keep the hero slider's right arrow clear of the brochure tab
+   (the slider rewrites left/transform/margin itself, so use the separate translate property) */
+.main-slider .tparrows.tp-rightarrow {
+    translate: -56px 0;
+}
