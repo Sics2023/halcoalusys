@@ -3298,3 +3298,51 @@ li .single-footer-contact-info .inner {
     
 }
 
+
+
+/* Mobile contact details inside the hamburger navigation */
+.mobile-menu-contact {
+    display: none;
+}
+@media only screen and (max-width: 991px) {
+    .top-bar-style2 {
+        display: none !important;
+    }
+    .main-menu .navbar-collapse .mobile-menu-contact {
+        display: block;
+        clear: both;
+        padding: 22px 20px 24px;
+        margin: 12px 0 0;
+        border-top: 1px solid rgba(255,255,255,.18);
+        background: #252629;
+        color: #fff;
+        text-align: left;
+    }
+    .mobile-menu-contact p {
+        color: #fff;
+        font-size: 15px;
+        font-weight: 600;
+        margin: 0 0 12px;
+    }
+    .mobile-menu-contact ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .mobile-menu-contact ul li {
+        display: block;
+        float: none;
+        margin: 0 0 10px;
+        padding: 0;
+        color: #c5c5c5;
+        font-size: 13px;
+        line-height: 1.5;
+        overflow-wrap: anywhere;
+    }
+    .mobile-menu-contact ul li:first-child {
+        color: #c5c5c5;
+    }
+    .mobile-menu-contact ul li a {
+        color: inherit;
+    }
+}
