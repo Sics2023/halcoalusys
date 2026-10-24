@@ -43,6 +43,22 @@ function mainmenu() {
 }
 
 
+
+/* Move a mobile-only copy of the contact details into the hamburger menu. */
+function mobileMenuContact() {
+    $('.main-menu .navbar-collapse').each(function () {
+        var $menu = $(this);
+        if ($menu.find('.mobile-menu-contact').length) return;
+
+        var $contact = $('.top-bar-style2 .top-style2-left').first().clone();
+        if (!$contact.length) return;
+
+        $contact.removeClass('top-style2-left').addClass('mobile-menu-contact');
+        $contact.find('ul').addClass('mobile-menu-contact-list');
+        $menu.append($contact);
+    });
+}
+
 //===Language switcher===
 function languageSwitcher() {
     if ($("#polyglot-language-options").length) {
@@ -1033,6 +1049,7 @@ jQuery(document).on('ready', function () {
 	(function ($) {
         // add your functions
         mainmenu ();
+        mobileMenuContact ();
         scrollToTop ();
         languageSwitcher ();
         searchbox ();
