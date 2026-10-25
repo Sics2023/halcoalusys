@@ -14087,3 +14087,20 @@ body.brochure-modal-open {
         padding: 0 !important;
     }
 }
+
+/* ALUSYS by HALCO logo (new artwork, served at 2x) */
+.logo-box-style2 a img[src*="halco-alusys-logo"] {
+    width: auto !important;
+    height: 66px;
+    max-width: none;
+}
+.footer-logo img[src*="halco-alusys-logo"] {
+    width: auto !important;
+    height: 72px;
+    max-width: 100%;
+}
+@media only screen and (max-width: 767px) {
+    .logo-box-style2 a img[src*="halco-alusys-logo"] {
+        height: 46px;
+    }
+}
