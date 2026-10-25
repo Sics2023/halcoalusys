@@ -14,9 +14,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <!-- master stylesheet -->
-    <link rel="stylesheet" href="css/style.css?v=20261013">
+    <link rel="stylesheet" href="css/style.css?v=20261025">
     <!-- Responsive stylesheet -->
-    <link rel="stylesheet" href="css/responsive.css?v=20261013">
+    <link rel="stylesheet" href="css/responsive.css?v=20261025">
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
@@ -39,6 +39,7 @@
     width: 100%;
     height: auto;
     display: block;
+    float: none !important;
     filter: brightness(0.7);
     transition: filter 0.3s;
   }
@@ -53,11 +54,16 @@
     height: 80px;
     transform: translate(-50%, -50%);
     background: url('images/icon/play-button.png') no-repeat center center;
-  /* Style the iframe to take full space of container */}
-  #yt-container iframe {
-    width: 100%;
-    height: auto;
   }
+  /* video popup */
+  .video-modal { position: fixed; inset: 0; z-index: 2147483002; display: flex; align-items: center; justify-content: center; padding: 20px; }
+  .video-modal[hidden] { display: none; }
+  .video-modal-backdrop { position: absolute; inset: 0; background: rgba(10, 14, 18, 0.88); }
+  .video-modal-box { position: relative; width: min(1100px, 100%, calc((100vh - 120px) * 16 / 9)); }
+  .video-modal-frame { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #000; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5); }
+  .video-modal-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .video-modal-close { position: absolute; top: -46px; right: 0; width: 40px; height: 40px; border: 0; background: transparent; color: #fff; font-size: 36px; line-height: 1; cursor: pointer; }
+  .video-modal-close:hover { color: #c8d6df; }
 </style>
 
 
@@ -146,6 +152,18 @@
                                 </li>                             
                    
                                 <li><a href="contact.html">Contact</a></li>
+                                <li class="mobile-contact-info">
+                                    <p class="mci-title"><span class="icon-music"></span>Call or WhatsApp Us</p>
+                                    <a href="tel:+918811072189">+91 88110 72189</a>
+                                    <a href="mailto:contact_us@halcoalusys.com">contact_us@halcoalusys.com</a>
+                                    <span class="mci-hours">Mon - Sat: 9am to 6pm</span>
+                                    <div class="mci-social">
+                                        <a href="#" aria-label="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                        <a href="#" aria-label="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                        <a href="#" aria-label="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                        <a href="#" aria-label="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
                     </nav>
@@ -548,19 +566,40 @@ Through our specialized division,  ALUSYS, we deliver unique and efficient fenes
 
 <!-- Add this JS (before </body> or in external JS file) -->
 <script>
-  document.getElementById('yt-overlay').addEventListener('click', function() {
-    const container = document.getElementById('yt-container');
-    container.innerHTML = '';  // remove thumbnail overlay
-    const iframe = document.createElement('iframe');
-    iframe.src = 'https://www.youtube.com/embed/hjAoycyLYy8?autoplay=1&rel=0';
-
-    iframe.width = '100%';
-    iframe.height = '100%';
-    iframe.frameBorder = '0';
-    iframe.allow = 'autoplay; encrypted-media; picture-in-picture';
-    iframe.allowFullscreen = true;
-    container.appendChild(iframe);
-  });
+  // Production Facilities video: play in a large 16:9 popup (the thumbnail is portrait, the video is wide)
+  (function () {
+    var VIDEO = 'https://www.youtube.com/embed/hjAoycyLYy8?autoplay=1&rel=0&modestbranding=1';
+    var overlay = document.getElementById('yt-overlay');
+    if (!overlay) return;
+    var modal = document.createElement('div');
+    modal.className = 'video-modal';
+    modal.hidden = true;
+    modal.setAttribute('role', 'dialog');
+    modal.setAttribute('aria-modal', 'true');
+    modal.setAttribute('aria-label', 'HALCO production facilities video');
+    modal.innerHTML = '<div class="video-modal-backdrop" data-video-close></div>' +
+      '<div class="video-modal-box"><button type="button" class="video-modal-close" data-video-close aria-label="Close video">&times;</button>' +
+      '<div class="video-modal-frame"></div></div>';
+    document.body.appendChild(modal);
+    var frame = modal.querySelector('.video-modal-frame');
+    function open() {
+      frame.innerHTML = '<iframe src="' + VIDEO + '" title="HALCO production facilities" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';
+      modal.hidden = false;
+      document.body.classList.add('brochure-modal-open');
+    }
+    function close() {
+      frame.innerHTML = '';   // stops playback
+      modal.hidden = true;
+      document.body.classList.remove('brochure-modal-open');
+    }
+    overlay.setAttribute('role', 'button');
+    overlay.setAttribute('tabindex', '0');
+    overlay.setAttribute('aria-label', 'Play HALCO production facilities video');
+    overlay.addEventListener('click', open);
+    overlay.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
+    modal.addEventListener('click', function (e) { if (e.target.closest('[data-video-close]')) close(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !modal.hidden) close(); });
+  })();
 </script>
 
                     <div class="col-xl-7">
@@ -825,9 +864,9 @@ Through our specialized division,  ALUSYS, we deliver unique and efficient fenes
 
 
     <!-- thm custom script -->
-    <script src="js/custom.js?v=20261013"></script>
-    <script src="js/brochure.js?v=20261013"></script>
-    <script src="js/showroom.js?v=20261013"></script>
+    <script src="js/custom.js?v=20261025"></script>
+    <script src="js/brochure.js?v=20261025"></script>
+    <script src="js/showroom.js?v=20261025"></script>
 
 
 

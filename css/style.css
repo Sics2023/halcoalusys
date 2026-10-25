@@ -14021,3 +14021,69 @@ body.brochure-modal-open {
         max-width: 480px;
     }
 }
+
+/* Mobile: contact details move from the top bar into the hamburger menu */
+.main-menu .navigation > li.mobile-contact-info {
+    display: none;
+}
+@media only screen and (max-width: 991px) {
+    .top-bar-style2 {
+        display: none !important;
+    }
+    .main-menu .navbar-collapse .navigation > li.mobile-contact-info {
+        display: block;
+        padding: 18px 20px 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .main-menu .navigation > li.mobile-contact-info .mci-title {
+        margin: 0 0 8px;
+        color: #ffffff;
+        font-size: 15px;
+        font-weight: 500;
+    }
+    .main-menu .navigation > li.mobile-contact-info .mci-title span {
+        margin-right: 8px;
+    }
+    .main-menu .navigation > li.mobile-contact-info > a,
+    .main-menu .navigation > li.mobile-contact-info .mci-hours {
+        display: block;
+        padding: 4px 0;
+        border: 0;
+        color: #c8d3da;
+        font-size: 14px;
+        line-height: 1.5;
+        text-transform: none;
+        background: none;
+    }
+    .main-menu .navigation > li.mobile-contact-info > a:hover {
+        color: #ffffff;
+    }
+    .main-menu .navigation > li.mobile-contact-info .mci-social {
+        display: flex;
+        gap: 10px;
+        margin-top: 12px;
+    }
+    .main-menu .navigation > li.mobile-contact-info .mci-social a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        padding: 0;
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        border-radius: 50%;
+        color: #ffffff;
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width: 991px) {
+    .main-menu .navbar-collapse .navigation > li.mobile-contact-info > a {
+        padding: 4px 0 !important;
+        font-weight: 400 !important;
+        font-size: 14px !important;
+        line-height: 1.5 !important;
+    }
+    .main-menu .navbar-collapse .navigation > li.mobile-contact-info .mci-social a {
+        padding: 0 !important;
+    }
+}
