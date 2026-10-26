@@ -14143,3 +14143,29 @@ body.brochure-modal-open {
         height: 240px;
     }
 }
+
+/* form result messages */
+.form-status {
+    margin: 12px 0 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.form-status.is-ok { color: #2e7d4f; }
+.form-status.is-error { color: #b42318; }
+.footer-area .form-status.is-ok { color: #9fd8b4; }
+.footer-area .form-status.is-error { color: #ffb4a8; }
+
+/* contact email / phone links take the colour of the surrounding text */
+.single-working-process-style2 a[href^="mailto:"],
+.single-footer-contact-info a[href^="mailto:"],
+.top-style2-left a[href^="mailto:"],
+.location-info a,
+.legal-content a[href^="mailto:"] {
+    color: inherit;
+}
+.single-working-process-style2 a[href^="mailto:"]:hover,
+.single-footer-contact-info a[href^="mailto:"]:hover,
+.top-style2-left a[href^="mailto:"]:hover {
+    color: #4A5F6F;
+}
+.top-style2-left a[href^="mailto:"]:hover { color: #ffffff; }

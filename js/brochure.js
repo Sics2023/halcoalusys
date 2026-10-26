@@ -3,7 +3,8 @@
 (function () {
     var BROCHURE_URL = 'downloads/ALUSYS-Exterior-Brochure.pdf';
     var BROCHURE_NAME = 'ALUSYS-Exterior-Brochure.pdf';
-    var FORM_ENDPOINT = 'https://formsubmit.co/ajax/contact_us@halcoalusys.com';
+    var FORM_ENDPOINT = 'https://formsubmit.co/ajax/alusys@halcoaluminium.com';
+    var FORM_CC = 'antonywilson@halcoaluminium.com';
     var STORAGE_KEY = 'alusysBrochureLead';
 
     function store(get, value) {
@@ -152,6 +153,7 @@
                     _subject: 'Brochure download: ' + name,
                     _template: 'table',
                     _captcha: 'false',
+                    _cc: FORM_CC,
                     Name: name,
                     Phone: phone,
                     Brochure: 'ALUSYS Exterior Brochure',
