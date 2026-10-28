@@ -3298,3 +3298,84 @@ li .single-footer-contact-info .inner {
     
 }
 
+
+
+/***
+=============================================
+    Readability & mobile polish
+=============================================
+***/
+/* feature card titles sit on a solid band so they stay readable over the photo */
+.single-featured-box .title h3 {
+    display: inline-block;
+    margin-left: -10px;
+    padding: 4px 10px;
+    border-radius: 3px;
+    background: rgba(74, 95, 111, 0.9);
+}
+/* light grey text on the dark "Why Aluminium" cards was hard to read */
+.why-choose-content .single-box.blackbg .text-holder p {
+    color: #c9cfd4;
+}
+/* small label above page titles ("Contact us", "Legal") on dark hero images */
+.breadcrumb-area .inner-content-box .title-s2 span {
+    color: #c3ccd2;
+}
+/* counters such as "100%" no longer wrap onto two lines */
+.single-fact-counter .count-box {
+    width: auto;
+    white-space: nowrap;
+}
+.single-fact-counter .count-box h1 {
+    display: flex;
+    align-items: baseline;
+}
+
+@media only screen and (max-width: 991px) {
+    /* fixed (parallax) backgrounds render badly or not at all on phones and tablets */
+    * {
+        background-attachment: scroll !important;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    /* hero captions stay inside the screen */
+    .main-slider .tp-caption {
+        max-width: calc(100vw - 24px) !important;
+    }
+    .main-slider .slide-content .big-title,
+    .main-slider .slide-content .text {
+        white-space: normal !important;
+        text-shadow: 0 1px 6px rgba(0, 0, 0, 0.45);
+    }
+    .single-fact-counter .count-box h1 {
+        font-size: 40px;
+    }
+}
+
+/* touch screens have no hover: always show the product name on the home-page gallery cards */
+@media (hover: none) {
+    .single-project-style4 .img-holder .overlay-content {
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: auto;
+        padding: 14px 16px;
+        background: rgba(255, 255, 255, 0.94);
+        opacity: 1;
+        transform: none;
+    }
+    .single-project-style4 .img-holder .overlay-content .title {
+        padding-top: 0;
+    }
+    .single-project-style4 .img-holder .overlay-content .title h3 {
+        font-size: 17px;
+    }
+}
+
+/* tablets: the footer's first column spans the full row, so give it room before Quick Links */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .single-footer-widget.marbtm50-s4 {
+        margin-bottom: 50px;
+    }
+}

@@ -34,6 +34,10 @@
             'border-radius:6px 0 0 6px;background:#4A5F6F;color:#fff;font-size:15px;font-weight:500;letter-spacing:1px;' +
             'writing-mode:vertical-rl;transform:translateY(-50%) rotate(180deg);box-shadow:0 6px 18px rgba(0,0,0,.2);cursor:pointer}' +
             '.brochure-tab i{transform:rotate(90deg)}' +
+            // phones: a small pill in the bottom-left corner instead of a tall tab over the content
+            '@media (max-width:767px){.brochure-tab{top:auto!important;bottom:16px!important;left:12px!important;right:auto!important;' +
+            'writing-mode:horizontal-tb;transform:none!important;padding:10px 16px;gap:8px;border-radius:22px;font-size:13px;letter-spacing:.3px}' +
+            '.brochure-tab i{transform:none}}' +
             '.brochure-modal{position:fixed;inset:0;z-index:2147483001;display:flex;align-items:center;justify-content:center;padding:16px}' +
             '.brochure-modal[hidden]{display:none}' +
             '.brochure-modal-backdrop{position:absolute;inset:0;background:rgba(18,25,31,.7)}' +

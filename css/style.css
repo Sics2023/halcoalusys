@@ -13886,11 +13886,30 @@ li .single-footer-contact-info .text p span{
 body.brochure-modal-open {
     overflow: hidden;
 }
-@media (max-width: 575px) {
+/* phones: a small pill in the bottom-left corner instead of a tall tab over the content */
+@media (max-width: 767px) {
     .brochure-tab {
-        padding: 14px 9px;
+        top: auto;
+        bottom: 16px;
+        left: 12px;
+        right: auto;
+        gap: 8px;
+        padding: 10px 16px;
+        border-radius: 22px;
         font-size: 13px;
+        letter-spacing: 0.3px;
+        writing-mode: horizontal-tb;
+        transform: none;
     }
+    .brochure-tab i {
+        transform: none;
+    }
+    .brochure-tab:hover,
+    .brochure-tab:focus-visible {
+        padding-right: 16px;
+    }
+}
+@media (max-width: 575px) {
     .brochure-modal-box {
         padding: 34px 22px 26px;
     }
